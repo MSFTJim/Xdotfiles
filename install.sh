@@ -30,16 +30,15 @@ mkdir go
 
 rm go1.15.2.linux-amd64.tar.gz
 
-
 printf "wget, tar, etc  complete \n" >> ~/dotfiles/DotfilesLog.txt 
 	
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH 
 
-printf "GOROOT = $GOROOT \n" >> DotfilesLog.txt 
-printf "GOPATH =  $GOPATH \n" >> DotfilesLog.txt 
-printf "PATH =  $PATH \n" >> DotfilesLog.txt 
+printf "GOROOT = $GOROOT \n" >> ~/dotfiles/DotfilesLog.txt 
+printf "GOPATH =  $GOPATH \n" >> ~/dotfiles/DotfilesLog.txt 
+printf "PATH =  $PATH \n" >> ~/dotfiles/DotfilesLog.txt 
 
 printf "export complete  \n" >> ~/dotfiles/DotfilesLog.txt 
 
@@ -47,6 +46,14 @@ cd ~
 go get -u github.com/justjanne/powerline-go
 
 printf "powerline complete  \n" >> ~/dotfiles/DotfilesLog.txt 
+
+echo 'export GOROOT=/usr/local/go' >>/root/.bashrc
+echo 'export GOPATH=$HOME/go' >>/root/.bashrc
+echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
+
+printf "GOROOT = $GOROOT \n" >> ~/dotfiles/DotfilesLog.txt 
+printf "GOPATH =  $GOPATH \n" >> ~/dotfiles/DotfilesLog.txt 
+printf "PATH =  $PATH \n" >> ~/dotfiles/DotfilesLog.txt 
 
 echo 'function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $?)"
