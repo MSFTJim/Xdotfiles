@@ -4,7 +4,7 @@ then
 fi
 
 function Log_Writer () {
-	printf "$(date +%Y-%m-%d_%H:%M): $1  \n" >> ~/dotfiles/DotfilesLog.txt
+	printf "$(date +%Y-%m-%d_%H:%M:%N): $1  \n" >> ~/dotfiles/DotfilesLog.txt
 }
 
 Log_Writer "Start of Script File"
