@@ -22,11 +22,13 @@ Log_Writer "Powershell install, profile and command prompt complete"
 Log_Writer "Start of bash powerline"
 
 cd ~
-##wget https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
+wget -q https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
 ##tar xvf go1.15.2.linux-amd64.tar.gz
-##tar xf go1.15.2.linux-amd64.tar.gz
-mv go /usr/local
-mkdir go
+tar xf go1.15.2.linux-amd64.tar.gz
+
+## need user check becuase sudo won't work if root
+sudo mv go /usr/local
+
 
 rm go1.15.2.linux-amd64.tar.gz
 
