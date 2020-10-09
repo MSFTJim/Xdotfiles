@@ -23,7 +23,8 @@ Log_Writer "Start of bash powerline"
 
 cd ~
 wget https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
-tar xvf go1.15.2.linux-amd64.tar.gz
+##tar xvf go1.15.2.linux-amd64.tar.gz
+tar xf go1.15.2.linux-amd64.tar.gz
 mv go /usr/local
 mkdir go
 
@@ -38,7 +39,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH
 Log_Writer "export complete"
 
 cd ~
-go get -u github.com/justjanne/powerline-go
+## go get -u github.com/justjanne/powerline-go
 
 Log_Writer "powerline complete " 
 
