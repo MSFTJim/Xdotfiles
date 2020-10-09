@@ -15,16 +15,16 @@ Log_Writer "DOGVAR= $DOGVAR"
 curl -sSL https://raw.githubusercontent.com/PowerShell/PowerShell/master/tools/install-powershell.sh | bash
 
 ## update PWSH profile and fancy command prompt
-pwsh cmdprmt.ps1
-mkdir -p /root/.config/powershell/ && cp ~/dotfiles/myprofile.ps1 /root/.config/powershell/Microsoft.PowerShell_profile.ps1
+pwsh ~/dotfiles/cmdprmt.ps1
+mkdir -p ~/.config/powershell/ && cp ~/dotfiles/myprofile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 Log_Writer "Powershell install, profile and command prompt complete"
 
 Log_Writer "Start of bash powerline"
 
 cd ~
-wget https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
+##wget https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
 ##tar xvf go1.15.2.linux-amd64.tar.gz
-tar xf go1.15.2.linux-amd64.tar.gz
+##tar xf go1.15.2.linux-amd64.tar.gz
 mv go /usr/local
 mkdir go
 
