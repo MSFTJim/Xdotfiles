@@ -4,7 +4,7 @@ then
 fi
 
 function Log_Writer () {
-	printf "$(date +%Y-%m-%d_%H:%M): $1  \n" >> ~/workspace/CS-ImageTag/WhatDidIWrite.txt
+	printf "$(date +%Y-%m-%d_%H:%M): $1  \n" >> ~/workspace/CS-ImageTag/DotfilesLog.txt
 }
 
 Log_Writer "Start of Script File"
