@@ -8,10 +8,9 @@ function Log_Writer () {
 }
 
 Log_Writer "Start of Script File"
-Log_Writer "DOGVAR= $DOGVAR"
+Log_Writer "DOGVAR = $DOGVAR"
 
-
-## Update to the latest PowerShell
+ ## Update to the latest PowerShell
 curl -sSL https://raw.githubusercontent.com/PowerShell/PowerShell/master/tools/install-powershell.sh | bash
 
 ## update PWSH profile and fancy command prompt
