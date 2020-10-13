@@ -37,11 +37,12 @@ Log_Writer "Go Install Complete"
 go get -u github.com/justjanne/powerline-go
 Log_Writer "justjanne powerline complete " 
 
-_GOPATH=$(go env GOPATH)
-_GOROOT=$(go env GOROOT)
+echo '_GOPATH=$(go env GOPATH)' >>$HOME/.bashrc
+echo '_GOROOT=$(go env GOROOT)' >>$HOME/.bashrc
 
-echo 'export GOROOT=$_GOROOT' >>/root/.bashrc
-echo 'export GOPATH=$_GOPATH' >>/root/.bashrc
+echo 'export GOROOT=$_GOROOT' >>$HOME/.bashrc
+echo 'export GOPATH=$_GOPATH' >>$HOME/.bashrc
+
 #echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
 
 Log_Writer "GOROOT = $_GOROOT"
