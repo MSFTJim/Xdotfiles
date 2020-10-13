@@ -21,17 +21,8 @@ Log_Writer "Powershell install, profile and command prompt complete"
 Log_Writer "Start of bash powerline"
 
 cd ~
-#wget -q https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
-##tar xvf go1.15.2.linux-amd64.tar.gz
-#tar xf go1.15.2.linux-amd64.tar.gz
-
-## need user check becuase sudo won't work if root
-#sudo mv go /usr/local
-
-
-#rm go1.15.2.linux-amd64.tar.gz
-
-Log_Writer "wget, tar, etc  complete" 
+apt install golang-go
+Log_Writer "Install Go Complete" 
 	
 #export GOROOT=/usr/local/go
 #export GOPATH=$HOME/go
@@ -40,13 +31,13 @@ Log_Writer "wget, tar, etc  complete"
 Log_Writer "export complete"
 
 cd ~
-## go get -u github.com/justjanne/powerline-go
+go get -u github.com/justjanne/powerline-go
 
-Log_Writer "powerline complete " 
+Log_Writer "bash powerline complete " 
 
-#echo 'export GOROOT=/usr/local/go' >>/root/.bashrc
-#echo 'export GOPATH=$HOME/go' >>/root/.bashrc
-#echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
+echo 'export GOROOT=/usr/local/go' >>/root/.bashrc
+echo 'export GOPATH=$HOME/go' >>/root/.bashrc
+echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
 
 Log_Writer "GOROOT = $GOROOT "
 Log_Writer "GOPATH =  $GOPATH "
