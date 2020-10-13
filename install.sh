@@ -14,8 +14,8 @@ Log_Writer "DOGVAR = $DOGVAR"
 #curl -sSL https://raw.githubusercontent.com/PowerShell/PowerShell/master/tools/install-powershell.sh | bash
 
 ## update PWSH profile and fancy command prompt
-#pwsh ~/dotfiles/cmdprmt.ps1
-#mkdir -p ~/.config/powershell/ && cp ~/dotfiles/myprofile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
+pwsh ~/dotfiles/cmdprmt.ps1
+mkdir -p ~/.config/powershell/ && cp ~/dotfiles/myprofile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 Log_Writer "Powershell install, profile and command prompt complete"
 
 Log_Writer "Start of bash powerline"
