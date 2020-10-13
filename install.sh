@@ -31,6 +31,8 @@ Log_Writer "Install Go Complete"
 Log_Writer "export complete"
 
 cd ~
+apt install golang-go
+
 go get -u github.com/justjanne/powerline-go
 
 Log_Writer "bash powerline complete " 
