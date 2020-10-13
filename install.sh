@@ -8,27 +8,14 @@ function Log_Writer () {
 }
 
 Log_Writer "Start of Script File"
-Log_Writer "DOGVAR = $DOGVAR"
+Log_Writer "DOGVAR = $DOGVAR" 
 
- ## Update to the latest PowerShell
-#curl -sSL https://raw.githubusercontent.com/PowerShell/PowerShell/master/tools/install-powershell.sh | bash
-
-## update PWSH profile and fancy command prompt
+## install powerline moduals & update PWSH profile 
 pwsh ~/dotfiles/cmdprmt.ps1
 mkdir -p ~/.config/powershell/ && cp ~/dotfiles/myprofile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 Log_Writer "Powershell install, profile and command prompt complete"
 
 Log_Writer "Start of bash powerline"
-
-cd ~
-apt-get install golang-go --assume-yes
-Log_Writer "Install Go Complete" 
-	
-#export GOROOT=/usr/local/go
-#export GOPATH=$HOME/go
-#export PATH=$PATH:$GOROOT/bin:$GOPATH 
-
-Log_Writer "export complete"
 
 cd ~
 apt-get install golang-go --assume-yes
@@ -43,12 +30,9 @@ echo '_GOROOT=$(go env GOROOT)' >>$HOME/.bashrc
 echo 'export GOROOT=$_GOROOT' >>$HOME/.bashrc
 echo 'export GOPATH=$_GOPATH' >>$HOME/.bashrc
 
-#echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
-
 Log_Writer "GOROOT = $_GOROOT"
 Log_Writer "GOPATH =  $_GOPATH"
 Log_Writer "PATH =  $PATH "
-
 
 echo 'function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $?)"
