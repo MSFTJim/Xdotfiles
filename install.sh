@@ -21,7 +21,7 @@ Log_Writer "Powershell install, profile and command prompt complete"
 Log_Writer "Start of bash powerline"
 
 cd ~
-apt install golang-go
+apt-get install golang-go --assume-yes
 Log_Writer "Install Go Complete" 
 	
 #export GOROOT=/usr/local/go
@@ -31,11 +31,11 @@ Log_Writer "Install Go Complete"
 Log_Writer "export complete"
 
 cd ~
-apt install golang-go
+apt-get install golang-go --assume-yes
+Log_Writer "Go Install Complete" 
 
 go get -u github.com/justjanne/powerline-go
-
-Log_Writer "bash powerline complete " 
+Log_Writer "justjanne powerline complete " 
 
 _GOPATH=$(go env GOPATH)
 _GOROOT=$(go env GOROOT)
