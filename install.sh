@@ -44,8 +44,8 @@ echo 'export GOROOT=$_GOROOT' >>/root/.bashrc
 echo 'export GOPATH=$_GOPATH' >>/root/.bashrc
 #echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
 
-Log_Writer "GOROOT = $GOROOT "
-Log_Writer "GOPATH =  $GOPATH "
+Log_Writer "GOROOT = $_GOROOT"
+Log_Writer "GOPATH =  $_GOPATH"
 Log_Writer "PATH =  $PATH "
 
 
