@@ -35,21 +35,24 @@ go get -u github.com/justjanne/powerline-go
 
 Log_Writer "bash powerline complete " 
 
-echo 'export GOROOT=/usr/local/go' >>/root/.bashrc
-echo 'export GOPATH=$HOME/go' >>/root/.bashrc
-echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
+_GOPATH=$(go env GOPATH)
+_GOROOT=$(go env GOROOT)
+
+echo 'export GOROOT=$_GOROOT' >>/root/.bashrc
+echo 'export GOPATH=$_GOPATH' >>/root/.bashrc
+#echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH' >>/root/.bashrc
 
 Log_Writer "GOROOT = $GOROOT "
 Log_Writer "GOPATH =  $GOPATH "
 Log_Writer "PATH =  $PATH "
 
 
-#echo 'function _update_ps1() {
-#    PS1="$($GOPATH/bin/powerline-go -error $?)"
-#}
-#if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi' >>/root/.bashrc
+echo 'function _update_ps1() {
+    PS1="$($GOPATH/bin/powerline-go -error $?)"
+}
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi' >>/root/.bashrc
 
 Log_Writer "bashrc complete"
 
