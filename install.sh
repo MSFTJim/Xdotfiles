@@ -1,3 +1,4 @@
+#! /bin/bash
 echo "first line of script"
 if [ -f ~/dotfiles/DotfilesLog.txt ] 
 then
