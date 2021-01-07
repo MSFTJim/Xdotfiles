@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 ps -p $$
 echo "first line of script"
 if [ -f ~/dotfiles/DotfilesLog.txt ] 
