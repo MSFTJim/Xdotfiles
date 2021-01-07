@@ -3,10 +3,11 @@ if [ -f ~/dotfiles/DotfilesLog.txt ]
 then
     rm ~/dotfiles/DotfilesLog.txt 
 fi
-
-#function Log_Writer () {
-#	printf "$(date +%Y-%m-%d_%H:%M:%N): $1  \n" >> ~/dotfiles/DotfilesLog.txt
-#}
+echo "after if"
+function Log_Writer () {
+	printf "$(date +%Y-%m-%d_%H:%M:%N): $1  \n" >> ~/dotfiles/DotfilesLog.txt
+}
+echo "after function"
 
 
 #Log_Writer "Start of Script File"
