@@ -7,7 +7,7 @@ then
     rm ~/dotfiles/DotfilesLog.txt 
 fi
 
-Log_Writer () {
+function Log_Writer () {
 	printf "$(date +%Y-%m-%d_%H:%M:%N): $1  \n" >> ~/dotfiles/DotfilesLog.txt
 }
 
